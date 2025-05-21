@@ -1,0 +1,19 @@
+.close {
+  background: red;
+  color: white;
+  border-radius: 100%;
+}
+
+.content {
+  border-radius: 20px;
+  margin-top: 90px;
+}
+
+.body {
+  border-radius: 20px;
+  /* margin-top: 90px; */
+  padding: 0;
+}
+.overlay {
+  margin-top: 90px;
+}

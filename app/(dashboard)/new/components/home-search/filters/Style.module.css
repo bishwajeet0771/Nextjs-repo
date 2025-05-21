@@ -1,0 +1,279 @@
+.dropdown {
+  background-color: #f3f3f3;
+  min-width: fit-content;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 0px;
+}
+
+.option {
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  text-wrap: nowrap;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.MaxOption {
+  padding-left: 120px;
+}
+
+.input {
+  background-color: #f3f3f3;
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.input::placeholder {
+  color: #242424 !important;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.minMaxInput {
+  background-color: #f3f3f3;
+  color: #242424;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100px;
+}
+
+.budgetMinMaxInput {
+  background-color: #f3f3f3;
+  color: #242424;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100px;
+  height: 36px;
+  border: 0.5px solid rgb(201, 199, 199);
+  border-radius: 4px;
+  padding-left: 4px;
+}
+
+.minMaxInput::placeholder {
+  color: #242424 !important;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.pill {
+  background: #cbe9ff;
+}
+
+.newPill {
+  background: #cbe9ff;
+  padding: 2px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* new dropdown styles */
+
+.newSelectFieldMainCon {
+  /* max-width: 130px; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.newSelectdropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 0.5px solid rgb(201, 199, 199);
+  border-radius: 4px;
+  min-height: 36px;
+  height: 100%;
+}
+
+.newInput {
+  color: #242424;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  pointer-events: none;
+}
+
+.newSelectdropdownOuterCon {
+  position: absolute;
+  top: 36px;
+  z-index: 2;
+  width: 100%;
+  min-width: 140px;
+}
+
+.newBudgetSelectdropdownOuterCon {
+  min-width: 253px;
+}
+
+.newSelectdropdownCon {
+  background-color: #f3f3f3;
+  gap: 4px;
+  padding: 4px;
+  border: 0.5px solid rgb(231, 230, 230);
+  border-radius: 4px;
+  margin-top: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.newBudgetSelectdropdownCon {
+  padding: 0;
+  max-height: 300px;
+  padding-top: 68px;
+  padding-left: 6px;
+}
+
+.optionInnerFiled {
+  accent-color: green;
+  height: 20px;
+  width: 20px;
+  margin-right: 4px;
+}
+
+.newMultiSelectFieldMainCon {
+  max-width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.newSelectdropdownBhksHolder {
+  gap: 4px;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.budgetFieldsCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 6px;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+
+/* TAB */
+@media only screen and (min-width: 600px) and (max-width: 1600px) {
+  .input::placeholder,
+  .minMaxInput::placeholder,
+  .minMaxInput,
+  .input,
+  .newInput,
+  .option {
+    font-size: 12px;
+  }
+
+  .input {
+    height: 20px !important;
+  }
+  .dropdown {
+    background-color: #f3f3f3;
+    min-width: fit-content;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 0px;
+  }
+
+  .newSelectdropdown {
+    min-height: 30px;
+  }
+
+  .newSelectdropdownOuterCon {
+    top: 26px;
+  }
+
+  .newBudgetSelectdropdownCon {
+    padding: 0;
+    max-height: 300px;
+    padding-left: 6px;
+  }
+
+  .budgetFieldsCon {
+    top: 14px;
+  }
+
+  .newSelectdropdownCon {
+    max-height: 300px;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .input::placeholder,
+  .minMaxInput::placeholder,
+  .minMaxInput,
+  .input,
+  .option {
+    font-size: 12px;
+  }
+  .dropdown {
+    background-color: #f3f3f3;
+    min-width: fit-content;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding: 0px;
+  }
+
+  .newSelectdropdown {
+    min-height: 30px;
+  }
+
+  .newSelectdropdownOuterCon {
+    top: 26px;
+  }
+
+  .newBudgetSelectdropdownCon {
+    padding: 0;
+    max-height: 200px;
+    padding-left: 6px;
+  }
+
+  .budgetFieldsCon {
+    top: 14px;
+  }
+  .newSelectdropdownCon {
+    max-height: 300px;
+  }
+}

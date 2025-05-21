@@ -1,0 +1,376 @@
+/* AGENT SPECIFIC CLASSNAME */
+.aRoot {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.aSteps {
+  margin-bottom: 5%;
+  width: 80%;
+  margin-right: 20px;
+}
+.compltedIcon {
+  border-color: white;
+}
+/* NORMAL CSS */
+.root {
+  width: 100%;
+}
+
+.content {
+  margin-top: 18px !important;
+  width: 100% !important;
+}
+
+.steps {
+  margin-bottom: 5%;
+}
+.step {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.errorMsg {
+  text-align: right;
+  color: var(--Mandatory, #f00);
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.separator {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  height: 0.1rem;
+  border: 1px dashed #b5abac !important;
+  width: 100%;
+  position: relative;
+  top: -3px;
+  overflow-x: hidden;
+}
+
+.separatorForAgent {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  height: 0.1rem;
+  border: 1px dashed #b5abac !important;
+  width: 80% !important;
+  position: relative;
+  top: -3px;
+  z-index: 0;
+}
+
+.stepperIcon {
+  position: relative;
+  z-index: 3;
+  background-color: white;
+}
+
+.stepIcon {
+  /* background-color: green; */
+  outline: none;
+  background: white;
+  border: none;
+  /* border-width: 4px; */
+}
+
+.steplabelCommonForAll {
+  color: black;
+  text-align: center;
+  /* font-family: Montserrat; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  position: absolute;
+  right: 32px;
+  white-space: nowrap;
+}
+
+.stepLabelActive {
+  color: var(--Brand-green-primary, #148b16) !important;
+  text-align: center !important;
+  /* font-family: Montserrat !important; */
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+
+.stepLabelDone {
+  color: var(--Brand-green-primary, #148b16) !important;
+  text-align: center !important;
+  /* font-family: Montserrat !important; */
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.steplabel {
+  color: var(--Black-2, #333);
+  text-align: center;
+  /* font-family: Montserrat; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.newTextInput {
+  border: 1px solid rgb(205 215 222);
+  border-radius: 4px;
+  height: 48px;
+  padding-left: 1rem;
+}
+
+.newTextInput,
+.textInput,
+.mangingDrCust {
+  color: var(--Black-2, #333);
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.newTextInput:focus::placeholder,
+.textInput:focus::placeholder,
+.mangingDrCust:focus::placeholder {
+  color: transparent !important;
+}
+
+.newTextInput::placeholder,
+.textInput::placeholder,
+.cityPincodeCust::placeholder,
+.mangingDrCust::placeholder {
+  color: #556477 !important;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.newTextInput::-ms-input-placeholder,
+.textInput::-ms-input-placeholder,
+.mangingDrCust::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #556477 !important;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.newTextInput:focus {
+  outline: none;
+}
+
+.rootSuccess {
+  display: none;
+}
+
+.pill {
+  background-color: #0c7aca;
+  color: white;
+}
+
+.inputRoot {
+  width: 100% !important;
+  max-width: 423px !important;
+}
+.textAreaInput,
+.mangingDrCust {
+  color: var(--Black-2, #333);
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 1;
+}
+.textAreaInput:focus::placeholder {
+  color: transparent !important;
+}
+.textAreaInput::placeholder {
+  color: #556477 !important;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.textAreaInput::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #556477 !important;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.custlabelOfNum {
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.custlabelOfNumpop {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 1280px) {
+  .newTextInput,
+  .textInput {
+    height: 49px;
+    /* font-family: Montserrat; */
+  }
+
+  .newTextInput::placeholder,
+  .textInput::placeholder,
+  .cityPincodeCust::placeholder,
+  .mangingDrCust::placeholder {
+    font-size: 16px;
+    /* font-family: Montserrat; */
+  }
+  .custlabelOfNum {
+    font-size: 16px;
+  }
+  /* .content{
+    width: 100% !important;
+    max-width: 423px !important;
+  } */
+}
+
+@media (max-width: 640px) {
+  .steps {
+    width: 93%;
+    margin: auto;
+  }
+  .aSteps {
+    /* margin-bottom: 5%; */
+    width: 90%;
+    margin-right: 7px;
+  }
+  .textAreaInput::placeholder {
+    color: #556477 !important;
+    /* font-family: Montserrat; */
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .pill {
+    font-size: 13px;
+  }
+  .optionCss {
+    font-size: 16px;
+  }
+  .calendComStDt {
+    margin: 18%;
+    max-width: 80%;
+  }
+
+  .custlabelOfNumpop {
+    font-size: 16px;
+  }
+  .errorMsg {
+    font-size: 12px;
+  }
+
+  .input::placeholder {
+    font-size: 8px;
+  }
+  .cityPincodeCust::placeholder {
+    font-size: 14.5px;
+  }
+  .cityPincodeCust {
+    font-size: 14.5px;
+  }
+
+  .mlabelCss {
+    font-size: 16px;
+  }
+
+  .newTextInput::placeholder,
+  .textInput::placeholder,
+  .NumberInput::placeholder {
+    font-size: 15px;
+    /* font-family: Montserrat; */
+  }
+
+  .mangingDrCust::placeholder {
+    font-size: 15px;
+  }
+  .stepLabel {
+    max-width: 60px;
+    font-size: 12px;
+    text-align: center;
+    text-wrap: nowrap;
+  }
+  .stepLabelActive {
+    max-width: 60px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .steplabelCommonForAll {
+    white-space: normal;
+    right: -15px !important;
+    min-width: 60px;
+  }
+
+  .newTextInput,
+  .textInput {
+    font-size: 14px;
+    /* font-family: Montserrat; */
+  }
+
+  .newTextInput:focus,
+  .textInput:focus {
+    font-size: 16px;
+    /* font-family: Montserrat; */
+  }
+  /* .content{
+    margin-top: 28px !important;
+  } */
+}
+.dropdown {
+  max-height: 250px;
+  overflow-y: auto;
+}
+/* StepCss.module.css */
+.dropdown::-webkit-scrollbar {
+  width: 3px; /* Set the width of the scrollbar */
+}
+
+.dropdown::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the background color of the track */
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: #aaa; /* Set the color of the scrollbar thumb */
+  border-radius: 3px; /* Add some border radius to make it look smoother */
+}
+
+.dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #888; /* Change the color of the thumb on hover */
+}
+
+/* Firefox */
+.dropdown {
+  scrollbar-width: thin; /* Set the width of the scrollbar */
+  scrollbar-color: #aaa transparent; /* Set the colors of the scrollbar and track */
+}

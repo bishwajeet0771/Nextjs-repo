@@ -1,0 +1,51 @@
+.tab {
+  color: #242424;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+}
+
+.tab:hover {
+  background-color: transparent;
+}
+.tab:first-of-type {
+  border-radius: rem(4px) 0 0 rem(4px);
+}
+.tab:last-of-type {
+  border-radius: 0 rem(4px) rem(4px) 0;
+}
+.tab + .tab {
+  border-left-width: 0;
+}
+.tab[data-active] {
+  z-index: 1;
+  color: #0073c6;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.bg {
+  background: #ddf0fd;
+  box-shadow: 0px 4px 10px 0px rgba(171, 171, 171, 0.1);
+}
+
+.searchCardbg {
+  border-radius: 30px;
+  background: linear-gradient(91deg, #000 0.74%, rgba(0, 0, 0, 0.4) 103.26%);
+}
+/* @media screen and (min-width: 768px) {
+  .tab {
+    font-size: 16px;
+  }
+} */
+@media screen and (max-width: 601px) {
+  .tab, .tabLabel {
+    font-size: 14px !important;
+    padding: 1%;
+  }
+  
+}

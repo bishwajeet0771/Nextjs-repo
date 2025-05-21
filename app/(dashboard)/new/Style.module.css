@@ -1,0 +1,11 @@
+.control[data-inactive] {
+  opacity: 0;
+  cursor: default;
+  background-color: transparent !important;
+}
+@media screen and (max-width: 601px) {
+  .control {
+    display: none;
+    background-color: transparent !important;
+  }
+}

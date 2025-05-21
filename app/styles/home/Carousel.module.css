@@ -1,0 +1,19 @@
+.controls {
+  /* padding-top: 15%; */
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+  bottom: -350px;
+}
+.control[data-inactive] {
+  opacity: 0;
+  cursor: default;
+}
+.root {
+  position: relative;
+}
+
+/* .blogControls{
+  
+} */

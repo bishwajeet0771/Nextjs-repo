@@ -1,0 +1,46 @@
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+.body {
+  border-radius: 20px;
+}
+
+.header {
+  display: none;
+}
+.inner {
+  position: relative;
+}
+
+.listingTitle {
+  color: #333;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 40px;
+}
+.closeListing {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-right: 30px;
+}
+@media (max-width: 640px) {
+  .overlay {
+    margin-top: 0px;
+  }
+  .body {
+    margin-top: 0px;
+    width: 100% !important;
+  }
+  .header {
+    display: none;
+  }
+}

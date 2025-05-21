@@ -1,0 +1,27 @@
+.control[data-inactive] {
+  opacity: 0;
+  cursor: default;
+}
+.controls {
+  bottom: 12px !important;
+}
+.indicator {
+  width: 109px !important;
+  height: 8px !important;
+  border-radius: 20px !important;
+  background: #92b2c8 !important;
+}
+
+.indicator[data-active] {
+  background: #fff !important;
+}
+
+.indicators {
+  padding: 0 4%;
+}
+
+@media screen and (max-width: 601px) {
+  .controls {
+    bottom: 3px !important;
+  }
+}

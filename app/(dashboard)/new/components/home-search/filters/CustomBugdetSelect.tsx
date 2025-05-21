@@ -1,0 +1,282 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import { useState } from "react";
+import styles from "./Style.module.css";
+import { useAtom } from "jotai";
+import { homeSearchFiltersAtom } from "@/app/store/home";
+import { toFormattedString } from "@/app/(dashboard)/searchOldPage/components/buget/budget";
+
+const MULTIPLIER = 100000;
+const THOUSANDMULTIPLIER = 1000;
+
+const groceries = [
+  "₹5 L",
+  "₹10 L",
+  "₹20 L",
+  "₹30 L",
+  "₹40 L",
+  "₹50 L",
+  "₹60 L",
+  "₹70 L",
+  "₹80 L",
+  "₹90 L",
+  "₹1 CR",
+  "₹10 CR",
+  "₹20 CR",
+  "₹30 CR",
+  "₹40 CR",
+  "₹50 CR",
+  "₹60 CR",
+];
+
+const pricesForRent = [
+  "₹5 L",
+  "₹5,000",
+  "₹10,000",
+  "₹15,000",
+  "₹20,000",
+  "₹25,000",
+  "₹30,000",
+  "₹35,000",
+  "₹40,000",
+  "₹45,000",
+  "₹50,000",
+  "₹55,000",
+  "₹60,000",
+  "₹70,000",
+  "₹80,000",
+  "₹90,000",
+  "₹1 L",
+];
+
+const map = new Map<string, { value: number }>([
+  ["₹5 L", { value: 5 * MULTIPLIER }],
+  ["₹10 L", { value: 10 * MULTIPLIER }],
+  ["₹20 L", { value: 20 * MULTIPLIER }],
+  ["₹30 L", { value: 30 * MULTIPLIER }],
+  ["₹40 L", { value: 40 * MULTIPLIER }],
+  ["₹50 L", { value: 50 * MULTIPLIER }],
+  ["₹60 L", { value: 60 * MULTIPLIER }],
+  ["₹70 L", { value: 70 * MULTIPLIER }],
+  ["₹80 L", { value: 80 * MULTIPLIER }],
+  ["₹90 L", { value: 90 * MULTIPLIER }],
+  ["₹1 CR", { value: 100 * MULTIPLIER }],
+  ["₹10 CR", { value: 1000 * MULTIPLIER }],
+  ["₹20 CR", { value: 2000 * MULTIPLIER }],
+  ["₹30 CR", { value: 3000 * MULTIPLIER }],
+  ["₹40 CR", { value: 4000 * MULTIPLIER }],
+  ["₹50 CR", { value: 5000 * MULTIPLIER }],
+  ["₹60 CR", { value: 6000 * MULTIPLIER }],
+
+  ["₹0", { value: 0 }],
+  ["₹5,000", { value: 5 * THOUSANDMULTIPLIER }],
+  ["₹10,000", { value: 10 * THOUSANDMULTIPLIER }],
+  ["₹15,000", { value: 15 * THOUSANDMULTIPLIER }],
+  ["₹20,000", { value: 20 * THOUSANDMULTIPLIER }],
+  ["₹25,000", { value: 25 * THOUSANDMULTIPLIER }],
+  ["₹30,000", { value: 30 * THOUSANDMULTIPLIER }],
+  ["₹35,000", { value: 35 * THOUSANDMULTIPLIER }],
+  ["₹40,000", { value: 40 * THOUSANDMULTIPLIER }],
+  ["₹45,000", { value: 45 * THOUSANDMULTIPLIER }],
+  ["₹50,000", { value: 50 * THOUSANDMULTIPLIER }],
+  ["₹55,000", { value: 55 * THOUSANDMULTIPLIER }],
+  ["₹60,000", { value: 60 * THOUSANDMULTIPLIER }],
+  ["₹70,000", { value: 70 * THOUSANDMULTIPLIER }],
+  ["₹80,000", { value: 80 * THOUSANDMULTIPLIER }],
+  ["₹90,000", { value: 90 * THOUSANDMULTIPLIER }],
+  ["₹1 L", { value: 100 * THOUSANDMULTIPLIER }],
+]);
+
+export function CustomBugdetSelect() {
+  const [f, dispatch] = useAtom(homeSearchFiltersAtom);
+  const activeTab = f.cg ?? "S";
+  const [minValue, maxValue] = f.bugdetValue;
+
+  const [focusedInput, setFocusedInput] = useState<"min" | "max" | null>("min");
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleDropdown = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  let defaultArray = activeTab == "S" ? groceries : pricesForRent;
+
+  const filteredOptions = defaultArray.filter((item) => {
+    const value = map.get(item)?.value ?? 0;
+
+    if (focusedInput === "max" || !maxValue) {
+      // Show all options if maxValue is null, undefined, or empty string while focusing on min
+      return value > minValue; // Show options greater than minValue
+    } else if (focusedInput === "min") {
+      // Show options less than or equal to maxValue while focusing on min
+      return value < maxValue;
+    } else {
+      // Show options between minValue and maxValue if no input is focused
+      return value >= minValue && value <= maxValue;
+    }
+  });
+
+  const options = filteredOptions.map((item) => {
+    const value = map.get(item)?.value ?? 0;
+    const handleOptionSelect = () => {
+      if (focusedInput === "max") {
+        // setMaxValue(value);
+
+        dispatch({
+          type: "SET_BUGDET_VALUE",
+          payload: [minValue, value],
+        });
+        // combobox.closeDropdown();
+        setIsOpen(false);
+      } else {
+        // setMinValue(value);
+
+        dispatch({
+          type: "SET_BUGDET_VALUE",
+          payload: [value, maxValue],
+        });
+        setFocusedInput("max");
+      }
+    };
+    return (
+      <div
+        key={item}
+        className={`${styles.option} ${
+          focusedInput == "max" ? styles.MaxOption : ""
+        }`}
+        onClick={handleOptionSelect}
+      >
+        {item}
+      </div>
+    );
+  });
+
+  const handleMinChange = (val: number) => {
+    // setMinValue(val);
+    dispatch({ type: "SET_BUGDET_VALUE", payload: [val, maxValue] });
+  };
+
+  const handleMaxChange = (val: number) => {
+    // setMaxValue(val);
+    dispatch({ type: "SET_BUGDET_VALUE", payload: [minValue, val] });
+  };
+
+  const handleMaxBlur = () => {
+    if (maxValue < minValue) {
+      // setMaxValue("" as any);
+      dispatch({ type: "SET_BUGDET_VALUE", payload: [minValue, "" as any] });
+    }
+  };
+  // const handleMinBlur = () => {
+  //   if (maxValue > minValue) {
+  //     // setMinValue("" as any);
+  //     dispatch({ type: "SET_BUGDET_VALUE", payload: ["" as any, maxValue] });
+  //   }
+  // };
+  const shouldShowBudget = !(
+    (f.bugdetValue[0] === 500000 && f.bugdetValue[1] === 600000000) ||
+    (f.bugdetValue[0] === 0 && f.bugdetValue[1] === 100000) ||
+    (!f.bugdetValue[0] && !f.bugdetValue[1])
+  );
+
+  return (
+    <div
+      className={styles.newSelectFieldMainCon}
+      onMouseLeave={() => setIsOpen(false)}
+      style={{ position: "relative" }}
+    >
+      <div
+        className={styles.newSelectdropdown}
+        onClick={() => toggleDropdown()}
+      >
+        <input
+          type="button"
+          // onClick={() => combobox.toggleDropdown()}
+          className={styles.newInput}
+          value={
+            shouldShowBudget
+              ? `${toFormattedString(minValue)}  ${
+                  "- " + toFormattedString(maxValue)
+                }`
+              : "₹ Budget"
+          }
+        />
+        <DropIcon />
+      </div>
+
+      {isOpen && (
+        <div
+          onMouseEnter={() => setIsOpen(true)}
+          onMouseLeave={() => setIsOpen(false)}
+          className={`${styles.newSelectdropdownOuterCon} ${styles.newBudgetSelectdropdownOuterCon}`}
+        >
+          <div
+            className={`${styles.newSelectdropdownCon} ${styles.newBudgetSelectdropdownCon}`}
+          >
+            <div className={styles.budgetFieldsCon}>
+              <div className={styles.budgetMinField}>
+                <label
+                  className={styles.budgetMinFieldLabel}
+                  htmlFor="homeBudgetMinField"
+                >
+                  Min Price
+                </label>
+                <input
+                  id="homeBudgetMinField"
+                  placeholder="Min Price"
+                  value={minValue}
+                  onChange={(e: any) =>
+                    handleMinChange(e.target.value as number)
+                  }
+                  onFocus={() => setFocusedInput("min")}
+                  max={f.bugdetValue[1] - 1 || 60 * MULTIPLIER} // Set max based on current filter values
+                  //  thousandSeparator=","
+                  className={styles.budgetMinMaxInput}
+                  //  thousandsGroupStyle="lakh"
+                />
+              </div>
+
+              <div className={styles.budgetMinField}>
+                <label
+                  className={styles.budgetMinFieldLabel}
+                  htmlFor="homeBudgetMaxField"
+                >
+                  Max Price
+                </label>
+                <input
+                  id="homeBudgetMaxField"
+                  placeholder="Max Price"
+                  value={maxValue}
+                  onChange={(e: any) =>
+                    handleMaxChange(e.target.value as number)
+                  }
+                  onFocus={() => setFocusedInput("max")}
+                  max={6000 * MULTIPLIER}
+                  //  thousandSeparator=","
+                  className={styles.budgetMinMaxInput}
+                  //  thousandsGroupStyle="lakh"
+                  onBlur={handleMaxBlur}
+                />
+              </div>
+            </div>
+            {options}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+const DropIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="26"
+    height="26"
+    viewBox="0 0 18 18"
+    fill="none"
+  >
+    <path
+      d="M12.4134 6C13.3274 6 13.7624 7.1251 13.0861 7.73994L10.1727 10.3885C9.79125 10.7352 9.20875 10.7352 8.82733 10.3885L5.91394 7.73994C5.23761 7.1251 5.67257 6 6.58661 6H12.4134Z"
+      fill="#8EA8CF"
+    />
+  </svg>
+);

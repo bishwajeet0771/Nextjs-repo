@@ -1,0 +1,22 @@
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+
+.body {
+  border-radius: 20px;
+  /* margin-top: 70px; */
+}
+/* .overlay {
+  margin-top: 70px;
+} */
+
+.header {
+  display: none;
+}
+
+.remove_padding {
+  padding: 0px !important;
+}

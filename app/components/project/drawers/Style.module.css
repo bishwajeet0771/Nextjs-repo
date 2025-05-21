@@ -1,0 +1,28 @@
+.title {
+  color: #001f35;
+  /* font-family: Montserrat; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+
+.header {
+  margin-top: 15px;
+}
+.content {
+  min-width: 30%;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 20px;
+  }
+}

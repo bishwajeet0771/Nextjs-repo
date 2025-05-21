@@ -1,0 +1,44 @@
+name: Deploy Next.js App to AWS EC2
+
+on:
+  push:
+    branches:
+      - siva-next-test  # Trigger deployment on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # GitHub-hosted runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run prod-build 
+
+      - name: Generate Sitemap
+        run: npm run postbuild
+
+      - name: Copy necessary files to EC2 (excluding node_modules and .git)
+        run: |
+          # SCP all necessary files to EC2, excluding node_modules and .git
+          scp -i ${{ secrets.AWS_EC2_KEY }} -r --exclude 'node_modules/*' --exclude '.git/*' * ${{ secrets.AWS_EC2_USER }}@${{ secrets.AWS_EC2_HOST }}:/opt/apps/code
+
+      - name: Trigger custom script on EC2
+        run: |
+          ssh -i ${{ secrets.AWS_EC2_KEY }} -o StrictHostKeyChecking=no ${{ secrets.AWS_EC2_USER }}@${{ secrets.AWS_EC2_HOST }} << 'EOF'
+            # Navigate to your app directory
+            cd /opt/apps
+            
+            # Run your custom script
+            bash ./prod.sh  # Replace with the path to your script
+            
+          EOF

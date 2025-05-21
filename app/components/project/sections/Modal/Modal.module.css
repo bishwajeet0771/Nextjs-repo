@@ -1,0 +1,12 @@
+.header {
+  display: none;
+}
+.innter {
+  position: relative;
+}
+.overlay {
+  margin-top: 70px;
+}
+.content {
+  margin-top: 70px;
+}

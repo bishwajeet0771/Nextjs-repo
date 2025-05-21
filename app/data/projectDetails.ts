@@ -1,0 +1,213 @@
+export const TOPIC_IDS = {
+  OVERVIEW: "overview",
+  LISTINGS_AVAILABLE: "listings-available",
+  ABOUT: "about",
+  PROPERTY_DETAILS: "property-details",
+  MASTER_PLAN: "master-plan",
+  PRICE_DETAILS: "price-details",
+  FLOOR_PLANS: "floor-plans",
+  GALLERY: "gallery",
+  AMENITIES: "amenities",
+  LOCATION_MAP: "location-map",
+  NEAR_BY: "near-by-projects",
+  BROCHURE: "brochure",
+  SPECIFICATIONS: "specifications",
+  HIGHLIGHTS: "highlights",
+  PROJECT_RATINGS: "proj_rating",
+  BANK_APPROVALS: "bank-approvals",
+  ABOUT_BUILDER: "about-builder",
+  WHY_BUY: "why-buy-this-project",
+  CUSTOMER_REVIEWS: "ratings",
+  FAQ: "faq",
+  SIMILAR_PROJECTS: "similar-projects",
+  CONTACT: "contact",
+  ADDRESS: "address",
+  LAUNCH_DATE: "launch-date",
+  POSSESSION_DATE: "possession-date",
+  LAND_AREA: "land-area",
+  RERA_STATUS: "rera-status",
+  RERA_ID: "rera-id",
+  PROPERTY_AVAILABLE: "property-available",
+  PROJECT_STATUS: "project-status",
+  PROJECT_LAND_AREA: "project-land-area",
+  UNITS_IN_PROJECT: "units-in-project",
+  LOCALITY: "locality",
+  START_DATE: "start-date",
+  END_DATE: "end-date",
+  VIEW_MASTER_PLAN: "view-master-plan",
+  PHOTOS: "photos",
+  VIDEOS: "videos",
+  HAVE_ANY_QUESTION: "have-any-question",
+  OTHER_PROJECTS: "other-projects",
+  COMPARE: "compare",
+  SHORTLIST: "shortlist",
+  PRICE_RANGE: "price-range",
+  DOWNLOAD_BROCHURE: "download-brochure",
+  RENT_LISTINGS_AVAILABLE: "rent-listings-available",
+  FREQUENTLY_ASKED_QUESTIONS: "frequently-asked-questions",
+  DOWNLOAD_MASTER_PLAN: "download-master-plan",
+  ALL_UNIT_TYPES: "all-unit-types",
+  APPROVED_BY: "approved-by",
+};
+
+export const topics = [
+  { label: "Overview", id: TOPIC_IDS.OVERVIEW },
+
+  { label: "Listings Available", id: TOPIC_IDS.LISTINGS_AVAILABLE },
+  { label: "About", id: TOPIC_IDS.ABOUT },
+  { label: "Property Details", id: TOPIC_IDS.PROPERTY_DETAILS },
+  { label: "Master Plan", id: TOPIC_IDS.MASTER_PLAN },
+  { label: "Pricing Details", id: TOPIC_IDS.PRICE_DETAILS },
+  { label: "Floor Plans", id: TOPIC_IDS.FLOOR_PLANS },
+  { label: "Gallery", id: TOPIC_IDS.GALLERY },
+  { label: "Amenities", id: TOPIC_IDS.AMENITIES },
+  { label: "Location Map", id: TOPIC_IDS.LOCATION_MAP },
+  // { label: "Near By", id: TOPIC_IDS.NEAR_BY },
+  { label: "Brochure", id: TOPIC_IDS.BROCHURE },
+  { label: "Specifications", id: TOPIC_IDS.SPECIFICATIONS },
+  { label: "Highlights", id: TOPIC_IDS.HIGHLIGHTS },
+  { label: "Project Ratings", id: TOPIC_IDS.PROJECT_RATINGS },
+  { label: "Bank Approvals", id: TOPIC_IDS.BANK_APPROVALS },
+  { label: "About Builder", id: TOPIC_IDS.ABOUT_BUILDER },
+  { label: "Why Buy This Project?", id: TOPIC_IDS.WHY_BUY },
+  { label: "Customer Reviews", id: TOPIC_IDS.CUSTOMER_REVIEWS },
+  { label: "FAQ", id: TOPIC_IDS.FAQ },
+  { label: "Similar Projects", id: TOPIC_IDS.SIMILAR_PROJECTS },
+  { label: "Contact", id: TOPIC_IDS.CONTACT },
+];
+export const Propertytopics = [
+  { label: "Overview", id: "overview" },
+  { label: "About", id: "about" },
+  { label: "Listing Details", id: "propertyDetails" },
+  { label: "Floor Plan", id: "floorPlans" },
+  { label: "Galleria", id: "gallery" },
+  { label: "Amenities", id: "amenities" },
+  { label: "Near By", id: "location-map" },
+  { label: "Project Detail", id: "projectDetails" },
+  { label: "Bank Approvals", id: "loans" },
+  { label: "Builder Details", id: "about-builder" },
+  { label: "Customer Reviews", id: "ratings" },
+  { label: "FAQ?", id: "faq" },
+  { label: "Similar Listings", id: "similarListing" },
+  { label: "Similar Projects", id: "similar-projects" },
+];
+
+export const propertyDetailsTypes = new Map([
+  [35, { id: 35, name: "Apartment", url: "", apiProp: "apartment" }],
+  [33, { id: 33, name: "Row House", url: "", apiProp: "rowhouse" }],
+  [31, { id: 31, name: "Villa", url: "", apiProp: "villa" }],
+  [34, { id: 34, name: "Villament", url: "", apiProp: "villament" }],
+  [32, { id: 32, name: "Plot", url: "", apiProp: "plot" }],
+  [36, { id: 36, name: "Independent", url: "", apiProp: "independent" }],
+]);
+
+export const projectprops = {
+  villa: 31,
+  plot: 32,
+  rowHouse: 33,
+  villament: 34,
+  apartment: 35,
+  independent: 36,
+};
+export const parseDataProjectProps = {
+  villa: 31,
+  plot: 32,
+  rowhouse: 33,
+  villament: 34,
+  apartment: 35,
+  independent: 36,
+};
+export const listingProps = {
+  Apartment: 35,
+  Villa: 31,
+  Plot: 32,
+  "Row House": 33,
+  Villament: 34,
+  "Independent House/Building": 36,
+};
+export const BACKEND_PROP_TYPES = {
+  apt: 35,
+  rowHouse: 33,
+  villa: 31,
+  vlmt: 34,
+  plot: 32,
+  "Independent House/Building": 36,
+};
+export const floorplanTypes = [
+  {
+    title: "By Type",
+    value: "type",
+  },
+  {
+    title: "By Unit",
+    value: "unit",
+  },
+  {
+    title: "By BHK",
+    value: "bhk",
+  },
+];
+
+export const bhkDetails = [
+  {
+    title: "All",
+    value: 0,
+  },
+  {
+    title: "1 RK",
+    value: 40,
+  },
+  {
+    title: "1 BHK",
+    value: 41,
+  },
+  {
+    title: "2 BHK",
+    value: 42,
+  },
+  {
+    title: "3 BHK",
+    value: 43,
+  },
+  {
+    title: "4 BHK",
+    value: 44,
+  },
+  {
+    title: "5 BHK",
+    value: 45,
+  },
+];
+export const bhkDetailsMap = new Map(
+  bhkDetails.map((detail) => [detail.title, detail.value])
+);
+
+export const filterKeysDetails = new Map([
+  ["bhkName", { name: "Unit type" }],
+  ["facingName", { name: "Facing" }],
+  ["towerName", { name: "Tower" }],
+  ["unitNumber", { name: "Unit Number" }],
+  ["superBuildUparea", { name: "Super Built Up Area" }],
+  ["caretarea", { name: "Carpet Area" }],
+  ["parkingType", { name: "Open/ Covered Parking" }],
+  ["totalNumberOfBalcony", { name: "Balconies" }],
+  ["totalNumberofBathroom", { name: "Bathroom" }],
+  ["floor", { name: "At Floor" }],
+  ["block", { name: "Block" }],
+  ["gardenArea", { name: "Garden  Area" }],
+  ["terraceArea", { name: "Terrace  Area" }],
+  ["parkingArea", { name: "Parking  Area" }],
+  ["plotArea", { name: "Plot Area" }],
+  ["length", { name: "Length of Plot" }],
+  ["width", { name: "Breadth of Plot" }],
+  ["noOfCarParking", { name: "Car Parking" }],
+  ["projIdEnc", { name: "Project ID" }],
+  ["phaseId", { name: "Phase ID" }],
+  ["propType", { name: "Property Type" }],
+  ["bhk", { name: "BHK ID" }],
+  ["towerId", { name: "Tower ID" }],
+  ["facingId", { name: "Facing ID" }],
+  ["floorPlanUrl", { name: "FloorPlan URL" }],
+  ["totalBalconySize", { name: "Balcony Size" }],
+  ["aptTypeName", { name: "Apartment Type" }],
+]);

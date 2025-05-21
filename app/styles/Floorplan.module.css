@@ -1,0 +1,143 @@
+.title {
+  color: #202020;
+  font-size: larger;
+  text-align: center !important;
+  font-weight: 700;
+  padding-left: 20px;
+}
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+
+.content {
+  border-radius: 20px;
+}
+
+.input {
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  height: 33px;
+  border-radius: 5px;
+  border: 0.3px solid #242424;
+  background: #fff;
+  box-sizing: border-box;
+  align-self: flex-end;
+}
+.input::placeholder {
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.input:focus::placeholder {
+  color: transparent !important;
+}
+.label {
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.root {
+  padding-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: auto;
+}
+
+.hidden {
+  display: none;
+}
+.option {
+  color: #242424;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+.option:hover {
+  background: #0073c6;
+  color: white;
+}
+
+.labelByBhk {
+  color: #001f35;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1600px) {
+  .label {
+    font-size: 12px;
+  }
+  .input::placeholder {
+    font-size: 12px;
+  }
+  .input {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 601px) {
+  .labelByBhk {
+    color: #001f35;
+    /* font-family: Montserrat; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-top: 6px;
+  }
+  .input {
+    font-size: 12px;
+  }
+  .input::placeholder {
+    font-size: 12px;
+  }
+  .input:focus {
+    font-size: 16px;
+  }
+  .option {
+    font-size: 12px;
+  }
+  .content {
+    margin-top: 0px;
+  }
+
+  .overlay {
+    margin-top: 0px;
+  }
+  .title {
+    padding-bottom: 4px;
+    margin-bottom: 1px;
+    padding-left: 1px;
+  }
+  .label {
+    font-size: 12px;
+  }
+  .mainComntainerFloorPlan {
+    height: auto;
+  }
+}

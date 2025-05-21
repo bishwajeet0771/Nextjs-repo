@@ -1,0 +1,20 @@
+.close {
+  background: #fff;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+.title {
+  color: #001f35;
+  /* font-family: Montserrat; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+@media (max-width:600px) {
+  .title{
+    font-size: 20px;
+  }
+}

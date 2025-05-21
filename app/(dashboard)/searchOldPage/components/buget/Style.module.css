@@ -1,0 +1,115 @@
+.dropdown {
+  background-color: #f3f3f3;
+  min-width: fit-content;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding: 0px;
+}
+
+.option {
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  text-wrap: nowrap;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.MaxOption {
+  padding-left: 120px;
+}
+
+.input {
+  background-color: #f3f3f3;
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.input::placeholder {
+  color: #242424 !important;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.minMaxInput {
+  background-color: #f3f3f3;
+  color: #242424;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100px;
+}
+
+.minMaxInput::placeholder {
+  color: #242424 !important;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.pill {
+  background: #CBE9FF;
+}
+
+/* .pill {
+  background: white;
+} */
+
+/* TAB */
+@media only screen and (min-width: 600px) and (max-width: 1600px) {
+  .input::placeholder,
+  .minMaxInput::placeholder,
+  .minMaxInput,
+  .input,
+  .option {
+    font-size: 12px;
+  }
+
+  .input {
+    height: 20px !important;
+  }
+  .dropdown {
+    background-color: #f3f3f3;
+    min-width: fit-content;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 0px;
+  }
+  /* .dropdown {
+    padding-right: 30px;
+  } */
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .input::placeholder,
+  .minMaxInput::placeholder,
+  .minMaxInput,
+  .input,
+  .option {
+    font-size: 12px;
+  }
+  .dropdown {
+    background-color: #f3f3f3;
+    min-width: fit-content;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding: 0px;
+  }
+}

@@ -1,0 +1,167 @@
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+
+.content {
+  border-radius: 20px;
+  /* margin-top: 90px; */
+}
+
+.body {
+  border-radius: 20px;
+  /* margin-top: 90px; */
+  padding: 0;
+}
+/* .overlay {
+  margin-top: 70px;
+} */
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.textInput {
+  height: 40px !important;
+  color: #212c33;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  border-radius: 5px;
+  outline: 1px solid #92b2c8;
+  outline-offset: -2px;
+  background: #fff;
+}
+.textInput:focus::placeholder {
+  color: transparent !important;
+}
+.textInput::placeholder {
+  color: #212c33 !important;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+
+.textInput::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #212c33;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+
+.error {
+  color: #f00;
+  /* font-family: Montserrat; */
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-align: right;
+  position: absolute;
+  bottom: -1rem;
+  right: 0;
+}
+
+.numInput,
+.input {
+  color: #303a42;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+  border: 1px solid rgb(187, 186, 186);
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 4px;
+  margin-top: 0.4rem;
+}
+
+.numInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input:focus,
+.numInput:focus {
+  outline: none;
+}
+
+.countryCodeText {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-right: 2px solid rgb(151, 150, 150);
+  padding-right: 10px;
+}
+
+.input:focus::placeholder {
+  color: transparent !important;
+}
+
+.input::placeholder {
+  color: #212c33 !important;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+.numInput {
+  padding-left: 63px;
+}
+.numInput:focus::placeholder {
+  color: transparent !important;
+}
+
+.numInput::placeholder {
+  color: #212c33 !important;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+}
+
+@media (max-width: 640px) {
+  .input::placeholder,
+  .numInput::placeholder,
+  .textInput::placeholder {
+    font-size: 14px;
+  }
+
+  .body {
+    border-radius: 4px;
+    /* margin-top: 90px; */
+    padding: 0;
+  }
+
+  .numInput,
+  .input {
+    font-size: 14px;
+    height: 42px;
+  }
+
+  .countryCodeText {
+    bottom: 8px;
+    font-size: 14px;
+  }
+}

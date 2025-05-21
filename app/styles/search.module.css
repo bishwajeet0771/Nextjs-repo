@@ -1,0 +1,137 @@
+.pill {
+  display: none;
+}
+
+.wrapperSelect {
+  border-radius: 46px !important;
+  background: #0073c6 !important;
+  color: #fff;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  width: 100px;
+}
+
+.MultiSelectionPill {
+  border-radius: 26px;
+  background: #cbe9ff;
+  box-shadow: 0px 4px 20px 0px rgba(112, 144, 176, 0.08);
+  color: #202020;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.customMultiSelectionPill {
+  border-radius: 26px;
+  background: #cbe9ff;
+  box-shadow: 0px 4px 20px 0px rgba(112, 144, 176, 0.08);
+  color: #202020;
+  /* font-family: Montserrat; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+
+  /* axtra added custom css */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6px;
+  padding-right: 6px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.wrapperMultiSelection {
+  min-height: 46px;
+  max-width: 446px;
+  border-radius: 57px;
+  border-left: 0.3px solid #98a5b8;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*   padding-left: 0rem; */
+}
+.buyrentoptions {
+  font-size: 14px;
+  font-weight: 600;
+}
+.buyrentoptions:hover {
+  color: green;
+}
+.body {
+  overflow: hidden;
+}
+
+.button {
+  color: var(--Field-colour-stroke, #282828);
+  font-feature-settings: "clig" off, "liga" off;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.remove {
+  color: red;
+}
+
+.homePageSearch {
+  max-height: 46px;
+  max-width: 746px;
+  border-radius: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6px;
+  outline: none;
+  border: none;
+}
+.homePageSearch::placeholder {
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown {
+    min-width: 100px;
+  }
+  .markLabel {
+    display: none;
+  }
+  .wrapperSelect {
+    width: 75px;
+    font-size: 14px;
+  }
+  .wrapperMultiSelection {
+    min-height: 46px;
+    max-width: 486px;
+    border-radius: 57px;
+    border-left: 0.3px solid #98a5b8;
+    border-right: none;
+    display: flex;
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    align-items: center;
+    /*  padding-left: 0rem; */
+  }
+  .MultiSelectionPillLabel {
+    font-size: 10px;
+  }
+  .MultiSelectionPillRemove {
+    width: 4px;
+  }
+  .MultiSelectionPill {
+    line-height: normal;
+  }
+}
+
+.header {
+  display: none;
+}

@@ -1,0 +1,156 @@
+.input {
+  height: 40px !important;
+  color: #212c33;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+  border-radius: 5px;
+  border: 1px solid #92b2c8;
+  background: #fff;
+}
+.classForContact:focus::placeholder {
+  color: transparent !important;
+}
+.input:focus::placeholder {
+  color: transparent !important;
+}
+
+.errorMsg {
+  text-align: right;
+  color: var(--Mandatory, #f00);
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.classForContact {
+  height: 40px !important;
+  color: #212c33;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+
+  border-radius: 5px;
+
+  background: #fff;
+  /* padding-left: 78px; */
+  /* padding-right: 0; */
+}
+
+.classForContact::placeholder {
+  color: #556477 !important;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.classForContact::-ms-input-placeholder {
+  /* Edge 12-18 */
+  color: #556477 !important;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.contectInput {
+  height: 40px !important;
+  color: #212c33;
+  /* font-family: Montserrat; */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.64px;
+
+  border-radius: 5px;
+  border: 1px solid #92b2c8;
+
+  background: #fff;
+  padding-left: 73px;
+}
+.contectInput:focus::placeholder {
+  color: transparent !important;
+}
+.description {
+  display: none;
+}
+
+/* .wrapper{
+  height: 40px !important;
+} */
+
+.label {
+  color: #303a42;
+  /* font-family: Montserrat; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.56px;
+}
+@media only screen and (min-width: 641px) and (max-width: 1280px) {
+  .classForContact::placeholder {
+    font-size: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .input::placeholder {
+    font-size: 8px;
+  }
+  .NumberInput::placeholder {
+    font-size: 8px;
+  }
+  .classForContact::placeholder {
+    font-size: 14.5px;
+  }
+  .cityPincodeCust {
+    font-size: 14.5px;
+  }
+
+  .mlabelCss {
+    font-size: 16px;
+  }
+
+  .NumberInput::placeholder {
+    font-size: 15px !important;
+  }
+  .mangingDrCust::placeholder {
+    font-size: 15px;
+  }
+  .stepLabel {
+    max-width: 60px;
+    font-size: 12px;
+    text-align: center;
+    text-wrap: nowrap;
+  }
+  .stepLabelActive {
+    max-width: 60px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .steplabelCommonForAll {
+    white-space: normal;
+    right: -15px !important;
+  }
+
+  /* .content{
+    margin-top: 28px !important;
+  } */
+}
+
+@media (max-width: 640px) {
+  .classForContact::placeholder {
+    font-size: 15px;
+  }
+}

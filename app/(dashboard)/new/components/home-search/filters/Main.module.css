@@ -1,0 +1,12 @@
+.dropdown {
+  min-width: 410px;
+  left: 44.5%;
+  position: absolute;
+}
+
+@media screen and (max-width: 601px) {
+  .dropdown {
+    min-width: 80%;
+    left: 110%;
+  }
+}

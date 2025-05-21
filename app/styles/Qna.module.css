@@ -1,0 +1,54 @@
+.title {
+  color: #202020;
+  /* font-family: Montserrat; */
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.28px;
+  width: 100%;
+  text-align: center !important;
+}
+
+.root {
+  border-radius: 5rem;
+}
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+
+.content {
+  border-radius: 20px;
+  /* margin-top: 70px; */
+}
+
+/* .overlay {
+  margin-top: 70px;
+} */
+
+.disabled {
+  display: none;
+}
+
+.header {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.star {
+  margin-right: 31px;
+}
+.body {
+  padding: 0px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+@media screen and (max-width: 767px) {
+  .star {
+    margin-right: 16px;
+  }
+}

@@ -1,0 +1,44 @@
+.dropdown {
+  /* width: 100%; */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  max-width: 180px;
+}
+.item{
+  display: inline-flex;
+}
+@media (min-width: 640px) {
+  .dropdown {
+    gap: 12px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+}
+
+.itemLabel {
+  color: #505050;
+  font-feature-settings: 'liga' off, 'clig' off;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 640px) {
+  .itemLabel {
+    font-size: 14px;
+  }
+  .dropdown{
+    max-width: 150px;
+  }
+}
+
+.itemLabel:hover {
+  color: green;
+}

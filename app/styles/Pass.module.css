@@ -1,0 +1,9 @@
+.visibilityToggle {
+  color: #148b16;
+  font-weight: 800;
+}
+
+.input:focus::placeholder {
+  color: transparent !important;
+}
+

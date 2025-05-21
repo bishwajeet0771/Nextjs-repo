@@ -1,0 +1,155 @@
+.control[data-inactive] {
+  opacity: 0;
+  cursor: default;
+}
+/* .controls {
+  bottom: 12px !important;
+} */
+.indicator {
+  width: 109px !important;
+  height: 8px !important;
+  border-radius: 20px !important;
+  background: #92b2c8 !important;
+}
+
+.indicator[data-active] {
+  background: #fff !important;
+}
+.indicators {
+  padding: 0 4%;
+}
+.slide {
+  height: 750px;
+}
+
+/* Cards Carousals block */
+.cardCarouselMainCon {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.srcollButton {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  bottom: 45%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardCarouselMainCon:hover .srcollButton {
+  opacity: 1;
+}
+
+.srcollButtonIcons {
+  width: 20px;
+  height: 20px;
+  stroke-width: 3px;
+  stroke: black;
+}
+
+/* left-[10px] md:left-[-40px] z-[10] rotate-180 */
+.srcollButtonLeft {
+  left: -25px;
+  z-index: 3;
+  transform: rotate(180deg);
+}
+
+/* right-[10px] md:right-[-40px] z-[10] */
+.srcollButtonRight {
+  right: -25px;
+  z-index: 2;
+}
+
+.cardsHoldingContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* cursor: grab; */
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+.cardsHoldingContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cardsHoldingInnerContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+/* mt-[30px] !w-full md:!w-[96%] mx-auto md:mx-0 */
+.carouselOuterCon {
+  margin-top: 30px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 602px) and (max-width: 1600px) {
+  .slide {
+    height: 545px;
+  }
+  .controls {
+    margin-top: -2% !important;
+  }
+
+  /* mt-[30px] !w-full md:!w-[96%] mx-auto md:mx-0 */
+  .carouselOuterCon {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .slide {
+    height: 283px;
+  }
+
+  .indicator {
+    display: none;
+  }
+  .control {
+    height: 10px;
+    width: 10px;
+  }
+
+  .srcollButtonLeft {
+    left: 0px;
+  }
+
+  .srcollButtonRight {
+    right: 0px;
+  }
+
+  /* mt-[30px] !w-full md:!w-[96%] mx-auto md:mx-0 */
+  .carouselOuterCon {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

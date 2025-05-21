@@ -1,0 +1,81 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "plugins": ["react", "react-hooks", "jsx-a11y", "import"],
+  "extends": [
+    "eslint:recommended", // Base set of recommended rules from ESLint
+    "plugin:react/recommended", // Recommended rules from eslint-plugin-react
+    "plugin:react-hooks/recommended", // Recommended rules from eslint-plugin-react-hooks
+    "plugin:jsx-a11y/recommended", // Recommended rules from eslint-plugin-jsx-a11y
+    "plugin:import/errors", // Specific import error rules
+    "plugin:import/warnings", // Specific import warning rules
+    "plugin:import/typescript", // TypeScript support for import plugin
+    "next", // Next.js specific rules
+    "next/core-web-vitals" // Next.js Core Web Vitals rules
+  ],
+  "rules": {
+    "react/no-array-index-key": "warn", // Avoid using array indices as keys
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "JSXAttribute[key.name='key'][value.expression.name='index']",
+        "message": "Do not use the array index directly as a key. Use a string prefix, e.g., `uniqueKey_${index}`."
+      },
+      {
+        "selector": "JSXAttribute[key.name='key'][value.expression.type='TemplateLiteral'] > TemplateElement[value.raw='']",
+        "message": "A string prefix is required before the index in keys (e.g., `uniqueKey_${index}`)."
+      }
+    ],
+    // "no-unused-vars": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-undef": "off",
+    "no-empty-pattern": "off",
+
+    "react/jsx-no-duplicate-props": "error", // Prevent duplicate props in JSX
+    "react/jsx-no-useless-fragment": "error", // Avoid unnecessary fragments
+    "react/jsx-boolean-value": ["error", "never"], // Enforce shorthand for boolean values in JSX
+    "react/self-closing-comp": "error", // Enforce self-closing tags when no children are present
+    "react/no-danger": "off", // Warn when using dangerouslySetInnerHTML
+    "react/no-deprecated": "error", // Prevent usage of deprecated methods
+    "react/no-unused-state": "warn", // Warn if a state property is not used
+    "react/no-unsafe": "error", // Prevent usage of unsafe lifecycle methods
+    "react/prefer-es6-class": "error", // Enforce ES6 classes for React components
+    "react/jsx-pascal-case": "error", // Enforce PascalCase for user-defined JSX components
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    // Hooks-specific rules
+    "react-hooks/rules-of-hooks": "error", // Enforces the rules of Hooks
+    "react-hooks/exhaustive-deps": "warn",
+
+    // Import rules
+    "import/no-unresolved": "error",
+    "import/named": "error",
+    "import/default": "error",
+    "import/namespace": "error",
+    "import/no-restricted-paths": "error",
+    "import/no-absolute-path": "error",
+    "import/no-dynamic-require": "error",
+    "import/no-self-import": "error",
+    "import/no-cycle": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

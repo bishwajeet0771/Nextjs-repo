@@ -1,0 +1,60 @@
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+
+.content {
+  border-radius: 20px;
+  background: transparent;
+  overflow-y: hidden;
+  /* scrollbar-color: gray;
+  scrollbar-width: thin;
+  scrollbar-track-color: gray; */
+}
+/* Webkit scrollbar */
+.content::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track of the scrollbar */
+.content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle of the scrollbar */
+.content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.header {
+  display: none;
+  background-color: transparent;
+}
+
+.inner {
+  overflow-y: hidden;
+}
+
+.mContent {
+  border-radius: 20px;
+  background: transparent;
+  margin-top: 70px;
+}
+.mOverlay {
+  margin-top: 70px;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+@media screen and (max-width: 601px) {
+  .content {
+    margin-top: 0px;
+  }
+  .overlay {
+    margin-top: 0px;
+  }
+}

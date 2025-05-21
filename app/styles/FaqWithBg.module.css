@@ -1,0 +1,120 @@
+.wrapper {
+  padding-top: 50px;
+  min-height: rem(820px);
+  /* background-image: radial-gradient(
+    var(--mantine-color-blue-6) 0%,
+    var(--mantine-color-blue-4) 100%
+  ); */
+  /* background-repeat: no-repeat;
+  background-position: top left; */
+  position: relative;
+  color: var(--mantine-color-black);
+  width: 90% !important;
+  scroll-margin-top: 180px;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+
+  color: #303a42;
+  font-feature-settings: "clig" off, "liga" off;
+  /* font-family: Montserrat; */
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.784px; /* 84.942% */
+}
+
+.item {
+  background-color: white;
+  padding: 0;
+  padding-right: 2%;
+  position: relative;
+}
+
+.panel {
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 3%;
+}
+
+.control {
+  font-size: var(--mantine-font-size-lg);
+  padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
+  color: var(--mantine-color-black);
+  padding: 0;
+  margin: 0;
+}
+
+.chevron {
+  width: 22px;
+  height: 22px;
+}
+
+.control:hover {
+  background-color: transparent;
+}
+
+.content {
+  color: #303a42;
+  font-feature-settings: "clig" off, "liga" off;
+  /* font-family: Montserrat; */
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34.983px; /* 124.938% */
+  margin: 0;
+  padding: 0;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  transform: rotate(0deg);
+
+  /* margin-left: var(--mantine-spacing-md); */
+}
+
+.itemOpened .icon {
+  transform: rotate(45deg);
+}
+
+.button {
+  display: block;
+  margin-top: var(--mantine-spacing-md);
+}
+
+@media (max-width: $mantine-breakpoint-sm) {
+  .button {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .content {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .content {
+    font-size: 18px;
+  }
+  .wrapper {
+    padding-top: 6px;
+    width: 100% !important;
+  }
+}

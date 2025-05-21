@@ -1,0 +1,52 @@
+.title {
+  font-size: larger;
+  text-align: center !important;
+  font-weight: 700;
+  color: #001f35;
+  /* font-family: Montserrat; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal; 
+  text-transform: uppercase;
+}
+
+.header {
+  background-color: #ededed;
+  margin-bottom: 2%;
+  display: none;
+}
+.close {
+  background: white;
+  color: #495b68;
+  border: 1px solid #495b68;
+  border-radius: 100%;
+}
+
+.overlay {
+  margin-top: 90px;
+}
+
+/* .content {
+  margin-top: 90.2px;
+} */
+
+/* Webkit scrollbar */
+.content::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track of the scrollbar */
+.content::-webkit-scrollbar-track {
+  background: #dce6ed;
+}
+
+/* Handle of the scrollbar */
+.content::-webkit-scrollbar-thumb {
+  background: #779fbb;
+  border-radius: 5px;
+  height: 1px;
+}
+.content::-webkit-scrollbar-thumb:hover {
+  background: #779fbb;
+}
